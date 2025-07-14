@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package stocktrading;
+
+option java_multiple_files = true;
+option java_package = "com.davidgordon.grpc";
+
+message StockRequest{
+  string symbol = 1;
+}
+
+message StockResponse{
+  string symbol = 1;
+  double price = 2;
+  string timestamp = 3;
+}
+
+service StockTradingService {
+  rpc getStockPrice(StockRequest) returns (StockResponse); // UNARY
+}
