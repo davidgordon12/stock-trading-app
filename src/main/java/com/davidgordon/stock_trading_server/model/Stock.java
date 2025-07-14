@@ -5,9 +5,10 @@ import jakarta.persistence.*;
 import java.sql.Timestamp;
 
 @Entity
-@Table(name = "stocks")
+@Table(name = "stocks", schema = "sta")
 public class Stock {
     @Id
+    @GeneratedValue
     private Integer id;
 
     private String symbol;
