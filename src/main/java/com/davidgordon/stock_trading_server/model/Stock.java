@@ -5,13 +5,11 @@ import jakarta.persistence.*;
 import java.sql.Timestamp;
 
 @Entity
-@Table(name = "sta.stocks")
+@Table(name = "stocks")
 public class Stock {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name = "symbol")
     private String symbol;
 
     private double price;
